@@ -12,6 +12,7 @@ Este projeto é uma aplicação Laravel que fornece uma implementação básica 
 
 ## Requisitos
 - PHP >= 7.3
+- Docker Compose
 - Composer
 - Laravel >= 8.x
 - PostgreSQL
