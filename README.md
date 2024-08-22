@@ -7,60 +7,77 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Laravel CRUD
+Este projeto é uma aplicação Laravel que fornece uma implementação básica de operações CRUD (Criar, Ler, Atualizar e Excluir). Este repositório é ideal para quem deseja entender e implementar operações CRUD com o Laravel Framework.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requisitos
+- PHP >= 7.3
+- Composer
+- Laravel >= 8.x
+- PostgreSQL
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalação
+Siga estas etapas para instalar e configurar a aplicação:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Clone o Repositório
 
-## Learning Laravel
+`git clone https://github.com/behappyOS/LaravelCrud.git`
+`cd LaravelCrud`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Instale as Dependências
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+`composer install`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Configure o Ambiente
 
-## Laravel Sponsors
+Copie o arquivo .env.example para .env e ajuste as configurações conforme necessário.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+`cp .env.example .env`
 
-### Premium Partners
+Gere a Chave de Aplicação
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+`php artisan key:generate`
 
-## Contributing
+Configure o Banco de Dados
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+No arquivo .env, defina suas credenciais de banco de dados:
 
-## Code of Conduct
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=nome_do_banco
+DB_USERNAME=usuario
+DB_PASSWORD=senha
+```
+Execute as Migrações
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+`php artisan migrate`
 
-## Security Vulnerabilities
+Inicie o Servidor
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+`php artisan serve`
 
-## License
+A aplicação estará acessível em http://localhost:8000.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Funcionalidades
+- Cadastro de Pacientes: Permite criar novos registros de Pacientes.
+- Listagem de Pacientes: Exibe uma lista de todos os Pacientes cadastrados.
+- Edição de Pacientes: Permite editar informações de Pacientes existentes.
+- Exclusão de Pacientes: Permite excluir registros de Pacientes.
+
+## Estrutura do Projeto
+- app/Http/Controllers/ - Controladores responsáveis pelas operações CRUD.
+- app/Models/ - Modelos Eloquent para interação com o banco de dados.
+- resources/views/ - Views Blade para a interface do usuário.
+- routes/web.php - Definição das rotas da aplicação.
+
+## Testes
+Para rodar os testes automatizados, utilize:
+
+`php artisan test`
+
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Sinta-se à vontade para ajustar as informações conforme necessário. Se houver aspectos específicos da aplicação que você gostaria de destacar, sinta-se à vontade para adicioná-los ao README.
