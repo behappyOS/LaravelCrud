@@ -32,7 +32,11 @@ class PacienteController extends Controller
             'nascimento' => 'required|date',
             'cpf' => ['required', 'string', 'size:11', new Cpf()],
             'cns' => ['required', 'string', 'size:15', new Cns],
-            'endereco' => 'required|string',
+            'cep' => 'required|string',
+            'logradouro' => 'required|string',
+            'bairro' => 'required|string',
+            'cidade' => 'required|string',
+            'estado' => 'required|string',
             'photo' => 'nullable|image',
         ]);
 
@@ -63,7 +67,11 @@ class PacienteController extends Controller
             'nascimento' => 'required|date',
             'cpf' => ['required', 'string', 'size:11', new Cpf()],
             'cns' => ['required', 'string', 'size:15', new Cns],
-            'endereco' => 'required|string',
+            'cep' => 'required|string',
+            'logradouro' => 'required|string',
+            'bairro' => 'required|string',
+            'cidade' => 'required|string',
+            'estado' => 'required|string',
             'photo' => 'nullable|image',
         ]);
 

@@ -20,7 +20,11 @@ class CreatePacientesTable extends Migration
             $table->date('nascimento');
             $table->string('cpf')->unique();
             $table->string('cns');
-            $table->text('endereco');
+            $table->text('cep');
+            $table->text('logradouro');
+            $table->text('bairro');
+            $table->text('cidade');
+            $table->text('estado');
             $table->string('photo')->nullable();
             $table->timestamps();
         });

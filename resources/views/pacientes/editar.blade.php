@@ -54,9 +54,41 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="endereco">Endereço</label>
-                                <input type="text" name="endereco" id="endereco" class="form-control" value="{{ old('endereco', $paciente->endereco) }}" required>
-                                @error('endereco')
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep" id="cep" class="form-control" value="{{ old('cep', $paciente->cep) }}" required>
+                                @error('cep')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="logradouro">Logradouro</label>
+                                <input type="text" name="logradouro" id="logradouro" class="form-control" value="{{ old('logradouro', $paciente->logradouro) }}" required>
+                                @error('logradouro')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" id="bairro" class="form-control" value="{{ old('bairro', $paciente->bairro) }}" required>
+                                @error('bairro')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="localidade">Cidade</label>
+                                <input type="text" name="localidade" id="localidade" class="form-control" value="{{ old('localidade', $paciente->localidade) }}" required>
+                                @error('localidade')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="uf">Estado</label>
+                                <input type="text" name="uf" id="uf" class="form-control" value="{{ old('uf', $paciente->uf) }}" required>
+                                @error('uf')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
