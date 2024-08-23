@@ -61,14 +61,17 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @if(!empty($paciente))
                 <div class="modal-body">
+                    <p><span id="modal-nome">{{ $paciente->photo }}</span></p>
                     <p><strong>Nome Completo:</strong> <span id="modal-nome">{{ $paciente->nome }}</span></p>
                     <p><strong>Nome da Mãe:</strong> <span id="modal-mae">{{ $paciente->mae }}</span></p>
                     <p><strong>Data de Nascimento:</strong> <span id="modal-nascimento">{{ $paciente->nascimento->format('d/m/Y') }}</span></p>
                     <p><strong>CPF:</strong> <span id="modal-cpf">{{ $paciente->cpf }}</span></p>
                     <p><strong>CNS:</strong> <span id="modal-cns">{{ $paciente->cns }}</span></p>
-                    <p><strong>Endereço:</strong> <span id="modal-endereco">{{ $paciente->endereco }}</span></p>
+                    <p><strong>Endereço:</strong> <span id="modal-endereco">{{ $paciente->cep }} - {{ $paciente->logradouro }} - {{ $paciente->bairro }} - {{ $paciente->localidade }} - {{ $paciente->uf }}</span></p>
                 </div>
+                @endif
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                 </div>

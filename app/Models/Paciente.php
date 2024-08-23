@@ -15,7 +15,11 @@ class Paciente extends Model
         'nascimento',
         'cpf',
         'cns',
-        'endereco',
+        'cep',
+        'logradouro',
+        'bairro',
+        'localidade',
+        'uf',
         'photo',
     ];
 

@@ -23,8 +23,8 @@ class CreatePacientesTable extends Migration
             $table->text('cep');
             $table->text('logradouro');
             $table->text('bairro');
-            $table->text('cidade');
-            $table->text('estado');
+            $table->text('localidade');
+            $table->text('uf');
             $table->string('photo')->nullable();
             $table->timestamps();
         });

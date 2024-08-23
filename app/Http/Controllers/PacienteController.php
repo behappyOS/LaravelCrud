@@ -35,8 +35,8 @@ class PacienteController extends Controller
             'cep' => 'required|string',
             'logradouro' => 'required|string',
             'bairro' => 'required|string',
-            'cidade' => 'required|string',
-            'estado' => 'required|string',
+            'localidade' => 'required|string',
+            'uf' => 'required|string',
             'photo' => 'nullable|image',
         ]);
 
@@ -70,8 +70,8 @@ class PacienteController extends Controller
             'cep' => 'required|string',
             'logradouro' => 'required|string',
             'bairro' => 'required|string',
-            'cidade' => 'required|string',
-            'estado' => 'required|string',
+            'localidade' => 'required|string',
+            'uf' => 'required|string',
             'photo' => 'nullable|image',
         ]);
 
