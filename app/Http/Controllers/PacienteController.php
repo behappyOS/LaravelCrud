@@ -6,6 +6,7 @@ use App\Models\Paciente;
 use App\Rules\Cns;
 use Illuminate\Http\Request;
 use App\Rules\Cpf;
+use Illuminate\Support\Facades\Storage;
 
 class PacienteController extends Controller
 {
@@ -37,7 +38,7 @@ class PacienteController extends Controller
             'bairro' => 'required|string',
             'localidade' => 'required|string',
             'uf' => 'required|string',
-            'photo' => 'nullable|image',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $data = $request->all();
@@ -72,10 +73,11 @@ class PacienteController extends Controller
             'bairro' => 'required|string',
             'localidade' => 'required|string',
             'uf' => 'required|string',
-            'photo' => 'nullable|image',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $paciente = Paciente::findOrFail($id);
+
         $paciente->update($request->all());
 
         return redirect()->route('pacientes.index');
